@@ -1,0 +1,46 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist":"electron-builder",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar --platform=win32 --arch=ia32 --icon=./assets/images/law.ico --prune=true --out=release-builds-win --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Agenda\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar --platform=linux --arch=x64 --icon=./assets/images/law.ico --prune=true --out=release-builds-linux"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Electron",
+    "Agenda",
+    "start",
+    "Desktop",
+    "calendar"
+  ],
+  "author": "Mina Emad",
+  "devDependencies": {
+    "electron": "^21.1.1",
+    "electron-packager": "^17.1.1",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3",
+    "sqlite3": "^5.1.2"
+  },
+  "build":{
+    "productName":"Agenda",
+    "appId":"com.Agenda.app",
+    "win":{
+        "target":[
+            "nsis",
+            "msi"
+        ],
+        "icon": "./assets/images/law.ico"
+    },
+    "directories":{
+        "buildResources":"resources",
+        "output":"release"
+    }
+  }
+ 
+}

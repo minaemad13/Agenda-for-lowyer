@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Agenda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href='./assets/css/style.css' />
+  <script src="https://cdn.jsdelivr.net/gh/Rakhmadi/RdataTB@master/dist/index.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .down {
+      background: transparent;
+      border: 0;
+      font-size: 40px;
+      color: #B49A69;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+      color: #212529;
+      background-color: #b49c73;
+      width: 210px;
+  }
+  .ulnav{
+    justify-content: center;
+  }
+  .nav-pills .nav-link {
+    background: 0 0;
+    border: 0;
+    border-radius: 0.25rem;
+    color: #b49c73;
+}
+
+  </style>
+</head>
+
+<body id="body" style="background-color:#2C3034;">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color:#37373F">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"> <img src="./assets/images/law-transformed.png" width="40px" height="40px" />
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src='./assets/images/carousel-1.jpg' class="d-block w-100" alt="...">
+        <div class="carousel-caption  d-md-block">
+          <div class="mt-md-5 mt-lg-5 mt-sm-5">
+            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">This is an Agenda Website to Know
+              the Details</h1>
+            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;"> of the Cases and their Dates</h1>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src='./assets/images/carousel-2.jpg' class="d-block w-100" alt="...">
+        <div class="carousel-caption  d-md-block">
+          <div class="mt-md-5 mt-lg-5 mt-sm-5">
+            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">This is an Agenda Website to Know
+              the Details</h1>
+            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;"> of the Cases and their Dates</h1>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src='./assets/images/carousel-33.jpg' class="d-block w-100" alt="...">
+        <div class="carousel-caption  d-md-block">
+          <div class="mt-md-5 mt-lg-5 mt-sm-5">
+            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">This is an Agenda Website to Know
+              the Details</h1>
+            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;"> of the Cases and their Dates</h1>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <a href="#about-section" class="mouse smoothscroll">
+      <span class="mouse-icon">
+        <span class="mouse-wheel"></span>
+      </span>
+    </a>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+  <ul class="nav nav-pills mb-3 ulnav" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation" style="width: 400px;">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Daily Data</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Weekly Data</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <div class="container table-responsive py-5 tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" lang="ar" dir="rtl">
+      <button type="button" id="export" class="down"><i class="fas fa-cloud-download-alt ic"
+          aria-hidden="true"></i></button>
+      <div id="export_div" style="background-color:#2C3034;">
+        <table id="myTable" class="table  table-striped table-dark table-bordered" style="text-align: center;">
+
+          <h1 id="curr_date" class="text-center" style="color:#B49C73"></h1>
+
+          <form class="row" method="POST">
+
+            <div class="col-md-5" style="margin: auto;margin-top:10px">
+
+              <input id="id_input" type="date" class="form-control" style="text-align:center" onchange="getVal()" />
+            </div>
+          </form>
+          <br /><br /><br /><br />
+          <thead>
+            <tr>
+              <th scope="col" style="color:#B49C73">#</th>
+              <th scope="col" style="color:#B49C73">رقم الدعوة</th>
+              <th scope="col" style="color:#B49C73">المحكمة</th>
+              <th scope="col" style="color:#B49C73">اسم المدعي</th>
+              <th scope="col" style="color:#B49C73">اسم المدعي عليه</th>
+              <th scope="col" style="color:#B49C73">الوقت</th>
+              <th scope="col" style="color:#B49C73">الملاحظات</th>
+              <th scope="col" style="color:#B49C73">الموعد القادم</th>
+              <th scope="col" style="color:#B49C73">الموعد السابق</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="color:#B49C73">1</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">2</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">3</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">4</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">5</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">6</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">7</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">8</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">9</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">10</th>
+              <input id="id_input0" class="input form-control" type="hidden" />
+              <td><input id="id_input1.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input1" class="input form-control" type="text" /></td>
+              <td><input id="id_input2" class="input form-control" type="text" /></td>
+              <td><input id="id_input3" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.55" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.5" class="input form-control" type="text" /></td>
+              <td> <input id="id_input4" class="input form-control" type="date" /></td>
+              <td> <input id="id_input5" class="input form-control" type="date" /></td>
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div dir="rtl" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-body" style="text-align:center;background-color:#2C3034 ">
+              <h3 style="text-align: center;
+              margin-top: 25px;
+              color: #b49c73;">
+                تم الادخال بنجاح
+              </h3>
+
+              <button style="margin-top: 39px;
+              align-items: center;" type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Done</button>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="container table-responsive py-5 tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" lang="ar" dir="rtl">
+      <button type="button" id="export1" class="down">
+        <i class="fas fa-cloud-download-alt ic"aria-hidden="true"></i>
+      </button>
+      <div id="export_div1" style="background-color:#2C3034;">
+        <table id="myTable1" class="table  table-striped table-dark table-bordered" style="text-align: center;">
+
+          
+
+          <!-- <form class="row" method="POST"> -->
+
+            <div class="col-md-5" style="margin: auto;margin-top:10px">
+
+              <input id="weekly_date" type="date" class="form-control" style="text-align:center" onchange="getVal1()" />
+            </div>
+          <!-- </form> -->
+          <br /><br /><br /><br />
+          <thead>
+            <tr>
+              <th scope="col" style="color:#B49C73">#</th>
+              <th scope="col" style="color:#B49C73">رقم الدعوة</th>
+              <th scope="col" style="color:#B49C73">المحكمة</th>
+              <th scope="col" style="color:#B49C73">اسم المدعي</th>
+              <th scope="col" style="color:#B49C73">اسم المدعي عليه</th>
+              <th scope="col" style="color:#B49C73">الوقت</th>
+              <th scope="col" style="color:#B49C73">الملاحظات</th>
+              <th scope="col" style="color:#B49C73">الموعد القادم</th>
+              <th scope="col" style="color:#B49C73">الموعد السابق</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="color:#B49C73">1</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td> 
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">2</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+              
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">3</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+             
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">4</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+            
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">5</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+           
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">6</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+             
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">7</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+             
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">8</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+             
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">9</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+             
+            </tr>
+            <tr>
+              <th scope="row" style="color:#B49C73">10</th>
+              <input id="id_input01" class="input form-control" type="hidden" />
+              <td><input id="id_input11.5" class="input form-control" type="text" /></td>
+
+              <td><input id="id_input11" class="input form-control" type="text" /></td>
+              <td><input id="id_input21" class="input form-control" type="text" /></td>
+              <td><input id="id_input31" class="input form-control" type="text" /></td>
+              <td><input id="id_input3.551" class="input form-control" type="time" /></td>
+
+              <td><input id="id_input3.51" class="input form-control" type="text" /></td>
+              <td> <input id="id_input41" class="input form-control" type="date" /></td>
+              <td> <input id="id_input51" class="input form-control" type="date" /></td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>  
+
+  </div>
+
+
+    <div class="container-fluid text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;background-color:#212529">
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+            <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+            <div class="ml-3">
+              <h5 class="text-white">The Office</h5>
+              <p class="m-0">123 Street, New York, USA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+            <i class="fa fa-2x fa-envelope-open text-primary"></i>
+            <div class="ml-3">
+              <h5 class="text-white">Email Us</h5>
+              <p class="m-0">info@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+            <i class="fa fa-2x fa-phone-alt text-primary"></i>
+            <div class="ml-3">
+              <h5 class="text-white">Call Us</h5>
+              <p class="m-0">+012 345 6789</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">TALAT LOTFY</h1>
+          </a>
+          <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
+            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
+          <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed
+            ea duo ipsum.</p>
+
+        </div>
+      </div>
+      <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+          <p class="m-0 text-white">&copy; <a class="font-weight-bold" style="color:#B49A69" href="#">Agenda
+              Website</a>. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+          <p class="m-0 text-white">Designed by <a class="font-weight-bold" style="color:#B49A69"
+              href="https://mina-emad-portfolio.herokuapp.com/">Mina Emad</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/jspdf.umd.min.js"></script>
+
+    <script src="./assets/JS/html2canvas.min.js"></script>
+    <script type="text/javascript" src="./src/renderer.js"></script>
+
+</body>
+
+</html>
