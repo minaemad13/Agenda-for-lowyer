@@ -1,4 +1,4 @@
-# electron-quick-start
+# AGENDA APP Using Electron JS
 
 **Clone and run for a quick way to see Electron in action.**
 
