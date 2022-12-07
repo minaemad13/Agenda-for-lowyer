@@ -39,7 +39,7 @@ function createWindow () {
   mainWindow.once("ready-to-show",mainWindow.show)
   mainWindow.removeMenu()
   // Open the DevTmaools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
   
   // mainWindow.webContents.insertCSS('html, body { overflow: hidden; }')
   mainWindow.on("closed",()=>{

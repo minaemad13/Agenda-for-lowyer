@@ -45,7 +45,7 @@ crud.Get_all(document.getElementById("id_input").value).then((data) => {
     rows[i].children[3].children[0].value = data[i - 1].court
     rows[i].children[4].children[0].value = data[i - 1].complainant
     rows[i].children[5].children[0].value = data[i - 1].Defendant
-    rows[i].children[6].children[0].value = data[i - 1].time
+    rows[i].children[6].children[0].value = data[i - 1].number_AD
     rows[i].children[7].children[0].value = data[i - 1].notes
     rows[i].children[8].children[0].value = data[i - 1].Next_Date
     rows[i].children[9].children[0].value = data[i - 1].Prev_Date
@@ -105,7 +105,7 @@ function getVal() {
         rows[i].children[3].children[0].value = data[i - 1].court
         rows[i].children[4].children[0].value = data[i - 1].complainant
         rows[i].children[5].children[0].value = data[i - 1].Defendant
-        rows[i].children[6].children[0].value = data[i - 1].time
+        rows[i].children[6].children[0].value = data[i - 1].number_AD
       
         rows[i].children[7].children[0].value = data[i - 1].notes
         rows[i].children[8].children[0].value = data[i - 1].Next_Date
@@ -167,7 +167,7 @@ function getVal1() {
         rows[i].children[3].children[0].value = data[i - 1].court
         rows[i].children[4].children[0].value = data[i - 1].complainant
         rows[i].children[5].children[0].value = data[i - 1].Defendant
-        rows[i].children[6].children[0].value = data[i - 1].time
+        rows[i].children[6].children[0].value = data[i - 1].number_AD
         rows[i].children[7].children[0].value = data[i - 1].notes
         rows[i].children[8].children[0].value = data[i - 1].Next_Date
         rows[i].children[9].children[0].value = data[i - 1].Prev_Date
@@ -230,18 +230,18 @@ $('.submit').on('click', function (event) {
   const val = document.getElementById("id_input").value;
   //let val2=val==''? n.toISOString().slice(0, 10):val
 
-  inserted_data = [$(this).closest('tr').find('input[id="id_input1.5"]').val(), $(this).closest('tr').find('input[id="id_input1"]').val(),
-  $(this).closest('tr').find('input[id="id_input2"]').val(),
-  $(this).closest('tr').find('input[id="id_input3"]').val(), $(this).closest('tr').find('input[id="id_input3.55"]').val(),$(this).closest('tr').find('input[id="id_input3.5"]').val(),
+  inserted_data = [$(this).closest('tr').find('textarea[id="id_input1.5"]').val(), $(this).closest('tr').find('textarea[id="id_input1"]').val(),
+  $(this).closest('tr').find('textarea[id="id_input2"]').val(),
+  $(this).closest('tr').find('textarea[id="id_input3"]').val(), $(this).closest('tr').find('textarea[id="id_input3.55"]').val(),$(this).closest('tr').find('textarea[id="id_input3.5"]').val(),
   $(this).closest('tr').find('input[id="id_input4"]').val() == '' ? null : $(this).closest('tr').find('input[id="id_input4"]').val(),
     null,
   document.getElementById("id_input").value]
 
 
 
-  inserted_data2 = [$(this).closest('tr').find('input[id="id_input1.5"]').val(), $(this).closest('tr').find('input[id="id_input1"]').val(),
-  $(this).closest('tr').find('input[id="id_input2"]').val(),
-  $(this).closest('tr').find('input[id="id_input3"]').val(), $(this).closest('tr').find('input[id="id_input3.55"]').val(),$(this).closest('tr').find('input[id="id_input3.5"]').val(),
+  inserted_data2 = [$(this).closest('tr').find('textarea[id="id_input1.5"]').val(), $(this).closest('tr').find('textarea[id="id_input1"]').val(),
+  $(this).closest('tr').find('textarea[id="id_input2"]').val(),
+  $(this).closest('tr').find('textarea[id="id_input3"]').val(), $(this).closest('tr').find('textarea[id="id_input3.55"]').val(),$(this).closest('tr').find('textarea[id="id_input3.5"]').val(),
     null,
   document.getElementById("id_input").value,
   $(this).closest('tr').find('input[id="id_input4"]').val() == '' ? null : $(this).closest('tr').find('input[id="id_input4"]').val()
