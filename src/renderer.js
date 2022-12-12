@@ -1,10 +1,4 @@
-/**
- * This file is loaded via the <script> tag in the index.html file and will
- * be executed in the renderer process for that window. No Node.js APIs are
- * available in this process because `nodeIntegration` is turned off and
- * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
- * to expose Node.js functionality from the main process.
- */
+
 const path = require('path')
 const crud = require(path.join(__dirname, 'src/CRUD.js'))
 n = new Date();
@@ -56,15 +50,9 @@ crud.Get_all(document.getElementById("id_input").value).then((data) => {
 })
 
 
-function getVal() {
+function getdailyVal() {
   const val = document.getElementById("id_input").value;
   document.getElementById("curr_date").innerHTML = val;
-  //console.log(val);
-
-  // data={
-  //   "Date":val ,
-  //   //"Curr":n.toISOString().slice(0, 10)
-  // }
   crud.Get_all(val).then((data) => {
     console.log(data)
     if (data.length == 0) {
@@ -117,7 +105,7 @@ function getVal() {
   })
 }
 
-function getVal1() {
+function getweeklyVal() {
   const val = document.getElementById("weekly_date").value;
 
   var curr = new Date(val); // get current date
@@ -176,52 +164,6 @@ function getVal1() {
 
     }
   })
-
-  // data={
-  //   "Date":val ,
-  //   //"Curr":n.toISOString().slice(0, 10)
-  // }
-  // crud.Get_all(val).then((data) => {
-  //     console.log(data)
-  //     if(data.length==0){
-  //       table = document.getElementsByTagName("table")[0];
-  //       var rows = table.querySelectorAll('tr');
-
-  //        for (let i = 1; i < rows.length; i++) {
-  //          rows[i].children[1].value = ""
-
-  //          rows[i].children[2].children[0].value = ""
-  //          rows[i].children[3].children[0].value = ""
-  //          rows[i].children[4].children[0].value = ""
-  //          rows[i].children[5].children[0].value = ""
-  //          rows[i].children[6].children[0].value = ""
-  //          rows[i].children[7].children[0].value = ""
-  //        }
-  //     }else{
-  //       table = document.getElementsByTagName("table")[0];
-  //       var rows = table.querySelectorAll('tr');
-  //       for (let i = 1; i < rows.length; i++) {
-  //         rows[i].children[1].value = ""
-  //         rows[i].children[2].children[0].value = ""
-  //         rows[i].children[3].children[0].value = ""
-  //         rows[i].children[4].children[0].value = ""
-  //         rows[i].children[5].children[0].value = ""
-  //         rows[i].children[6].children[0].value = ""
-  //         rows[i].children[7].children[0].value = ""
-  //       }
-  //        for (let i = 1; i < rows.length; i++) {
-  //         rows[i].children[1].value = data[i-1].id
-  //         rows[i].children[2].children[0].value = data[i-1].court
-  //         rows[i].children[3].children[0].value = data[i-1].complainant
-  //         rows[i].children[4].children[0].value = data[i-1].Defendant
-  //         rows[i].children[5].children[0].value = data[i-1].notes
-  //         rows[i].children[6].children[0].value = data[i-1].Next_Date
-  //         rows[i].children[7].children[0].value = data[i-1].Prev_Date
-  //          if (data.length == 1) break;
-  //        }
-
-  //   }
-  //   })
 }
 
 
@@ -252,25 +194,14 @@ $('.submit').on('click', function (event) {
 
 });
 
-document.getElementById("export").addEventListener('click', () => {
-  html2canvas(document.getElementById('export_div'))
-    .then(canvas => {
-      const url = canvas.toDataURL('image/png');
-      const a = document.createElement('a');
-      a.setAttribute('download', 'imageName. png');
-      a.setAttribute("href", url);
-      a.click();
+export_img=(div)=>{
+  html2canvas(document.getElementById(div))
+  .then(canvas => {
+    const url = canvas.toDataURL('image/png');
+    const a = document.createElement('a');
+    a.setAttribute('download', 'imageName. png');
+    a.setAttribute("href", url);
+    a.click();
 
-    })
-})
-document.getElementById("export1").addEventListener('click', () => {
-  html2canvas(document.getElementById('export_div1'))
-    .then(canvas => {
-      const url = canvas.toDataURL('image/png');
-      const a = document.createElement('a');
-      a.setAttribute('download', 'imageName. png');
-      a.setAttribute("href", url);
-      a.click();
-
-    })
-})
+  })
+}

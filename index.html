@@ -12,33 +12,8 @@
   <link rel="stylesheet" type="text/css" href='./assets/css/style.css' />
   <script src="https://cdn.jsdelivr.net/gh/Rakhmadi/RdataTB@master/dist/index.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    body::-webkit-scrollbar {
-      display: none;
-    }
-
-    .down {
-      background: transparent;
-      border: 0;
-      font-size: 40px;
-      color: #B49A69;
-    }
-    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-      color: #212529;
-      background-color: #b49c73;
-      width: 210px;
-  }
-  .ulnav{
-    justify-content: center;
-  }
-  .nav-pills .nav-link {
-    background: 0 0;
-    border: 0;
-    border-radius: 0.25rem;
-    color: #b49c73;
-}
-
-  </style>
+  <link href="https://www.flaticon.com/free-icon-font/map-marker-plus_5073746?k=1670786574930&log-in#" rel="stylesheet"/>
+  
 </head>
 
 <body id="body" style="background-color:#2C3034;">
@@ -139,8 +114,7 @@
 
   <div class="tab-content" id="pills-tabContent">
     <div class="container table-responsive py-5 tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" lang="ar" dir="rtl">
-      <button type="button" id="export" class="down"><i class="fas fa-cloud-download-alt ic"
-          aria-hidden="true"></i></button>
+      <button type="button" id="export" onclick="export_img('export_div')" class="down"><i class="fas fa-cloud-download-alt ic"aria-hidden="true"></i></button>
       <div id="export_div" style="background-color:#2C3034;">
         <table id="myTable" class="table  table-striped table-dark table-bordered" style="text-align: center;">
 
@@ -150,7 +124,7 @@
 
             <div class="col-md-5" style="margin: auto;margin-top:10px">
 
-              <input id="id_input" type="date" class="form-control" style="text-align:center" onchange="getVal()" />
+              <input id="id_input" type="date" class="form-control" style="text-align:center" onchange="getdailyVal()" />
             </div>
           </form>
           <br /><br /><br /><br />
@@ -165,6 +139,7 @@
               <th scope="col" style="color:#B49C73">الملاحظات</th>
               <th scope="col" style="color:#B49C73">الموعد القادم</th>
               <th scope="col" style="color:#B49C73">الموعد السابق</th>
+              <th scope="col"></th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -182,6 +157,9 @@
               <td> <input id="id_input5" class="input form-control" type="date" /></td>
               <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"></td>
+                  
+              <td><input type="submit" class="submit btn btn-outline-warning" value="ادخال" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"></td>    
             </tr>
             <tr>
               <th scope="row" style="color:#B49C73">2</th>
@@ -329,27 +307,23 @@
               align-items: center;" type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Done</button>
 
             </div>
-
-
           </div>
         </div>
       </div>
     </div>  
-
+    <!-- ******************************************************** -->
     <div class="container table-responsive py-5 tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" lang="ar" dir="rtl">
-      <button type="button" id="export1" class="down">
+      <button type="button" id="export1" onclick="export_img('export_div1')" class="down">
         <i class="fas fa-cloud-download-alt ic"aria-hidden="true"></i>
       </button>
       <div id="export_div1" style="background-color:#2C3034;">
         <table id="myTable1" class="table  table-striped table-dark table-bordered" style="text-align: center;">
 
-          <!-- <form class="row" method="POST"> -->
 
             <div class="col-md-5" style="margin: auto;margin-top:10px">
 
-              <input id="weekly_date" type="date" class="form-control" style="text-align:center" onchange="getVal1()" />
+              <input id="weekly_date" type="date" class="form-control" style="text-align:center" onchange="getweeklyVal()" />
             </div>
-          <!-- </form> -->
           <br /><br /><br /><br />
           <thead>
             <tr>
@@ -498,7 +472,6 @@
         </table>
       </div>
     </div>  
-
   </div>
 
 

@@ -4043,3 +4043,28 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: bold;
 
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.down {
+  background: transparent;
+  border: 0;
+  font-size: 40px;
+  color: #B49A69;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #212529;
+  background-color: #b49c73;
+  width: 210px;
+}
+.ulnav{
+justify-content: center;
+}
+.nav-pills .nav-link {
+background: 0 0;
+border: 0;
+border-radius: 0.25rem;
+color: #b49c73;
+}
