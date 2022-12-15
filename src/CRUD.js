@@ -13,9 +13,35 @@ exports.insert = function(arr) {
     if(err) {
       return console.log(err.message); 
     }
-    console.log('Row was added to the table: ${this.lastID}');
+    return 200;
   })
 };
+
+exports.delete = function(number) {
+
+	db.run(`delete from CRUD_crud where number = ${number}`, (err) => {
+	  if(err) {
+		return console.log(err.message); 
+	  }
+	  return 200;
+	})
+  };
+
+  exports.update = function(number , arr) {
+	ids=[]
+	db.all(`select id from CRUD_crud where number = "${number}"`, (err, rows) => {
+		if (err) reject(err);
+		ids=rows
+		console.log("====?",rows);
+	});
+	// db.run(`update CRUD_crud set number = ${arr[0]} , court = ${arr[1]} , complainant = ${arr[2]} , Defendant = ${arr[3]} , number_AD = ${arr[4]} , notes = ${arr[5]} , Next_Date= ${arr[6]} , Prev_Date = ${arr[7]}  where id in ${ids}`, (err) => {
+	//   if(err) {
+	// 	return console.log(err.message); 
+	//   }
+	//   return 200;
+	// })
+  };  
+
 
 // exports.Get_all = function (date) {
 //   let rows1

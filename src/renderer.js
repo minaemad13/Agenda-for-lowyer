@@ -194,6 +194,12 @@ $('.submit').on('click', function (event) {
 
 });
 
+$('.delete').on('click', function (event) {
+  event.preventDefault();
+crud.delete($(this).closest('tr').find('textarea[id="id_input1.5"]').val())
+getdailyVal()
+});
+crud.update(55,[])
 export_img=(div)=>{
   html2canvas(document.getElementById(div))
   .then(canvas => {
