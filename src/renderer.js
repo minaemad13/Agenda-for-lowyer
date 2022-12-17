@@ -15,7 +15,7 @@ for (let i = 0; i < document.querySelectorAll("#id_input5").length; i++) {
 }
 
 crud.Get_all(document.getElementById("id_input").value).then((data) => {
-  console.log(data)
+  // console.log(data)
   table = document.getElementsByTagName("table")[0];
   var rows = table.querySelectorAll('tr');
   for (let i = 1; i < rows.length; i++) {
@@ -54,7 +54,7 @@ function getdailyVal() {
   const val = document.getElementById("id_input").value;
   document.getElementById("curr_date").innerHTML = val;
   crud.Get_all(val).then((data) => {
-    console.log(data)
+    // console.log(data)
     if (data.length == 0) {
       table = document.getElementById("myTable");
       var rows = table.querySelectorAll('tr');
@@ -114,10 +114,10 @@ function getweeklyVal() {
 
   var firstday = new Date(curr.setDate(first)).toISOString().slice(0, 10);
   var lastday = new Date(curr.setDate(last)).toISOString().slice(0, 10);
-  console.log(lastday, firstday);
+  // console.log(lastday, firstday);
 
   crud.Get_weekly(firstday, lastday).then((data) => {
-    console.log(data)
+    // console.log(data)
     if (data.length == 0) {
       table = document.getElementById("myTable1");
       var rows = table.querySelectorAll('tr');
@@ -167,7 +167,7 @@ function getweeklyVal() {
 }
 
 
-$('.submit').on('click', function (event) {
+$('#submit').on('click', function (event) {
   event.preventDefault();
   const val = document.getElementById("id_input").value;
   //let val2=val==''? n.toISOString().slice(0, 10):val
@@ -189,17 +189,61 @@ $('.submit').on('click', function (event) {
   $(this).closest('tr').find('input[id="id_input4"]').val() == '' ? null : $(this).closest('tr').find('input[id="id_input4"]').val()
   ]
 
-  crud.insert(inserted_data)
-  crud.insert(inserted_data2)
+  crud.insert(inserted_data).then((res) => {
+    // console.log(res);
+    
+    
+    })
+  
+  crud.insert(inserted_data2).then((res) => {
+    // console.log(res);
+      if (res == 200){
+        // console.log(res);
+        $("#BlockUIConfirm1").show();
+        getdailyVal()
+      }
+    
+    })
 
 });
 
-$('.delete').on('click', function (event) {
+$('#delete').on('click', function (event) {
   event.preventDefault();
-crud.delete($(this).closest('tr').find('textarea[id="id_input1.5"]').val())
-getdailyVal()
+crud.delete($(this).closest('tr').find('textarea[id="id_input1.5"]').val()).then((res) => {
+// console.log(res);
+  if (res == 200){
+    // console.log(res);
+    $("#BlockUIConfirm").show();
+    getdailyVal()
+  }
+
+})
+// console.log(res);
+
 });
-crud.update(55,[])
+
+document.getElementById("DONEButton").addEventListener("click",()=>{
+  $("#toasdel").removeClass("show");
+})
+
+
+$('#update').on('click', function (event) {
+  // event.preventDefault();
+ 
+  updated_data = [$(this).closest('tr').find('textarea[id="id_input1.5"]').val(), $(this).closest('tr').find('textarea[id="id_input1"]').val(),
+  $(this).closest('tr').find('textarea[id="id_input2"]').val(),
+  $(this).closest('tr').find('textarea[id="id_input3"]').val(), $(this).closest('tr').find('textarea[id="id_input3.55"]').val(),$(this).closest('tr').find('textarea[id="id_input3.5"]').val(),
+  $(this).closest('tr').find('input[id="id_input4"]').val() == '' ? null : $(this).closest('tr').find('input[id="id_input4"]').val(),
+  $(this).closest('tr').find('input[id="id_input5"]').val() == '' ? null : $(this).closest('tr').find('input[id="id_input5"]').val()]
+  
+  crud.update($(this).closest('tr').find('input[id="id_input0"]').val(),updated_data)
+  getdailyVal()
+
+});
+
+
+
+
 export_img=(div)=>{
   html2canvas(document.getElementById(div))
   .then(canvas => {
@@ -210,4 +254,10 @@ export_img=(div)=>{
     a.click();
 
   })
+}
+function Submit() {
+	$('#BlockUIConfirm').hide();
+}
+function Submit1() {
+	$('#BlockUIConfirm1').hide();
 }

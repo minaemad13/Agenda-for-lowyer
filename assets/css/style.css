@@ -4068,3 +4068,165 @@ border: 0;
 border-radius: 0.25rem;
 color: #b49c73;
 }
+
+
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.8s;
+  padding: 20px 0;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay img {
+  height: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.overlay:target img {
+  animation: zoomdanfade 0.6s;
+}
+.overlay span {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: bold;
+}
+.overlay:target span {
+  animation: slideup 1s;
+}
+
+.overlay .close {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  position: absolute;
+  top: 15px;
+  font-size: 10px;
+  line-height: 7px;
+  padding: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.overlay:target .close {
+  animation: slide 1s;
+}
+
+/*animasi*/
+@keyframes zoomdanfade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+  100% {
+    opacty: 0.5;
+    top: 15px;
+  }
+}
+@keyframes slideup {
+  0% {
+    bottom: -20px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+.BlockUIConfirm {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 50;
+}
+
+.blockui-mask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	opacity: 0.4;
+}
+
+.RowDialogBody {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 400px;
+	opacity: 1;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.RowDialogBody > div:not(.confirm-body) {
+	padding: 8px 10px;
+}
+.RowDialogBody{
+  background-color: #2C3034;
+  color:white;
+  text-align: center;
+}
+.confirm-header {
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	font-size: 13pt;
+	font-weight: bold;
+	margin: 0;
+}
+
+.row-dialog-hdr-success {
+	border-top: 4px solid #b49c73;
+	border-bottom: 1px solid transparent;
+}
+
+.row-dialog-hdr-info {
+	border-top: 4px solid #5bc0de;
+	border-bottom: 1px solid transparent;
+}
+.confirm-body {
+	/* border-top: 1px solid #ccc; */
+	padding:20px 10px;
+	/* border-bottom: 1px solid #ccc; */
+}
+.confirm-btn-panel {
+	width: 100%;
+}
+.row-dialog-btn {
+	cursor: pointer;
+}
+
+.btn-naked {
+	background-color: transparent;
+}
+
+
+
