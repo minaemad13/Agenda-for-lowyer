@@ -243,8 +243,15 @@ $('#update').on('click', function (event) {
 
 
 
+function Submit() {
+  $('#BlockUIConfirm').hide();
+}
+function Submit1() {
+  $('#BlockUIConfirm1').hide();
+}
 
-export_img=(div)=>{
+
+function export_img(div) {
   html2canvas(document.getElementById(div))
   .then(canvas => {
     const url = canvas.toDataURL('image/png');
@@ -252,12 +259,16 @@ export_img=(div)=>{
     a.setAttribute('download', 'imageName. png');
     a.setAttribute("href", url);
     a.click();
-
   })
 }
-function Submit() {
-	$('#BlockUIConfirm').hide();
-}
-function Submit1() {
-	$('#BlockUIConfirm1').hide();
-}
+// export_img =(div)=>{
+//   html2canvas(document.getElementById(div))
+//   .then(canvas => {
+//     const url = canvas.toDataURL('image/png');
+//     const a = document.createElement('a');
+//     a.setAttribute('download', 'imageName. png');
+//     a.setAttribute("href", url);
+//     a.click();
+
+//   })
+// }
