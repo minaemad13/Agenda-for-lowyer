@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,900&display=swap');
+
+
+:root{
+    --main-color:  rgb(2,0,36);
+    --secondry-color: rgb(0, 128, 255);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;;
+    
+}
+
+.name{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.one ,.two,.three,.four{
+    width: 100px;
+    height: 100px;
+}
+.one{
+    border-top:4px dotted blue;
+    border-left:4px dotted blue;
+    border-top-left-radius: 15px;
+}
+.two{
+    border-top:4px solid blue;
+    border-right:4px solid blue;
+    border-top-right-radius: 15px;
+}
+.three{
+    border-bottom:4px solid blue;
+    border-left:4px solid blue;
+    border-bottom-left-radius: 15px;
+}
+.four{
+    border-bottom:4px solid blue;
+    border-right:4px solid blue;
+    border-bottom-right-radius: 15px;
+}
