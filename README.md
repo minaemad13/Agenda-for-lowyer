@@ -29,10 +29,6 @@ npm start
 ```
 
 # GUI Output
-![image]()
 
-<img
-  src="https://drive.google.com/file/d/1j4AC4zBKX5mVzqDm62pudR7WcKt_vJyz/view?usp=share_link"
-  alt="Agenda"
-  
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
+![Alt text](https://drive.google.com/file/d/1j4AC4zBKX5mVzqDm62pudR7WcKt_vJyz/view?usp=share_link)
+
