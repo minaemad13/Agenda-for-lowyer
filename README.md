@@ -30,5 +30,4 @@ npm start
 
 # GUI Output
 
-![Alt text](https://drive.google.com/file/d/1j4AC4zBKX5mVzqDm62pudR7WcKt_vJyz/view?usp=share_link)
-
+![agenda](https://user-images.githubusercontent.com/36317499/212444581-3a9df424-af90-4148-9a5d-cd95fd8a5260.png)
